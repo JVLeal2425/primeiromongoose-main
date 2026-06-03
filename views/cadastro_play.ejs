@@ -1,0 +1,50 @@
+<%- include('cabecalho.ejs')%>
+    <main class="container">
+        <a href="/lista" class="back-link">← Voltar para lista</a>
+
+        <div class="form-container">
+            <h2>Cadastrar Nova Playlist</h2>
+
+            <form method="post">
+                <div class="form-group">
+                    <label for="plnome">Nome da Playlsit *</label>
+                    <input type="text" id="plnome" name="plnome">
+                </div>
+
+                <div class="form-group">
+                    <label for="mus1">M1 *</label>
+                    <select name="mus1" id="mus1">
+                        <option value="Kyoto">Kyoto</option>
+                        <option value="Satanist">Satanist</option>
+                        <option value="American Teenager">American Teenager</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mus2">M2 *</label>
+                    <select name="mus2" id="mus2">
+                        <option value="Punish">Punish</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Bite The Hand">Bite The Hand</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="mus3">M3 *</label>
+                    <select name="mus3" id="mus3">
+                        <option value="Drop Dead">Drop Dead</option>
+                        <option value="Dust Bowl">Dust Bowl</option>
+                        <option value="True Blue">True Blue</option>
+                    </select>
+                </div>
+
+
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <a href="playlist.html" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('rodape.ejs')%>

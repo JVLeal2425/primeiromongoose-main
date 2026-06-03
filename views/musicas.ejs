@@ -1,0 +1,40 @@
+<%- include('cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Musicas</h2>
+            <a href="/cadastro_gen" class="btn btn-success">+ Novo Gênero</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Título</th>
+                        <th>Artista</th>
+                        <th>Gênero</th>
+                        <th>Duração</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>I Know The End</td>
+                        <td>Phobe Bridgers</td>
+                        <td>Indie</td>
+                        <td>5:47</td>
+                        <td><a href="/musicas/ikte" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>American Teenager</td>
+                        <td>Phobe Bridgers</td>
+                        <td>Indie</td>
+                        <td>5:47</td>
+                        <td><a href="/musicas/ikte" class="link">Ver Detalhes</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('rodape.ejs')%>

@@ -1,0 +1,25 @@
+<%- include('cabecalho.ejs')%>
+    <main class="container">
+        <a href="/lista" class="back-link">← Voltar para lista</a>
+
+        <div class="detail-box">
+            <h2>Detalhes do Gênero</h2>
+
+            <div class="detail-item">
+                <label>Nome:</label>
+                <p>
+                    <%=gnome%>
+                </p>
+            </div>
+
+            <div class="detail-item">
+                <label>Descrição</label>
+                <p>
+                    <%=gdesc%>
+                </p>
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <%- include('rodape.ejs')%>

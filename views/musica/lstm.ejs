@@ -1,0 +1,45 @@
+<%- include('../cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Músicas</h2>
+            <a href="/musica/addm" class="btn btn-success">+ Nova Música</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Duração</th>
+                        <th>Artista</th>
+                        <th>Ano de lançamento</th>
+                        <th>Ações</th>
+                        <th>Excluir para sempre</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%musicas.forEach(musicas=>{%>
+                        <tr>
+                            <td>
+                                <%=musicas.nome%>
+                            </td>
+                            <td>
+                                <%=musicas.duracao%>
+                            </td>
+                            <td>
+                                <%=musicas.artista%>
+                            </td>
+                            <td>
+                                <%=musicas.anolancamento%>
+                            </td>
+                            <td><a href="/musica/dd" class="link">Ver Detalhes</a></td>
+                            <td><a href="/musica/del/<%=musicas.id%>" class="link">Excluir</a></td>
+                        </tr>
+                        <%})%>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('../rodape.ejs')%>

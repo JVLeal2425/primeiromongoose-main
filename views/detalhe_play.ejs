@@ -1,0 +1,39 @@
+<%- include('cabecalho.ejs')%>
+    <main class="container">
+        <a href="/lista" class="back-link">← Voltar para lista</a>
+
+        <div class="detail-box">
+            <h2>Detalhes da Playlist</h2>
+
+            <div class="detail-item">
+                <label>Nome:</label>
+                <p>
+                    <%=pnome%>
+                </p>
+            </div>
+
+            <div class="detail-item">
+                <label>Música 1</label>
+                <p>
+                    <%=m1%>
+                </p>
+            </div>
+
+            <div class="detail-item">
+                <label>Música 2</label>
+                <p>
+                    <%=m2%>
+                </p>
+            </div>
+
+            <div class="detail-item">
+                <label>Música 3</label>
+                <p>
+                    <%=m3%>
+                </p>
+            </div>
+        </div>
+        </div>
+
+    </main>
+    <%- include('rodape.ejs')%>

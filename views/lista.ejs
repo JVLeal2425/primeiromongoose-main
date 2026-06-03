@@ -1,0 +1,49 @@
+<%- include('cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Artistas</h2>
+            <a href="/cadastro" class="btn btn-success">+ Novo Artista</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>País</th>
+                        <th>Ano Início</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Caetano Veloso</td>
+                        <td>Brasil</td>
+                        <td>1965</td>
+                        <td><a href="artista-detalhes.html?id=1" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Maria Bethânia</td>
+                        <td>Brasil</td>
+                        <td>1965</td>
+                        <td><a href="artista-detalhes.html?id=2" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Gilberto Gil</td>
+                        <td>Brasil</td>
+                        <td>1963</td>
+                        <td><a href="artista-detalhes.html?id=3" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Gal Costa</td>
+                        <td>Brasil</td>
+                        <td>1967</td>
+                        <td><a href="artista-detalhes.html?id=4" class="link">Ver Detalhes</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('rodape.ejs')%>

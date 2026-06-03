@@ -1,0 +1,37 @@
+<%- include('../cabecalho.ejs')%>
+    <main class="container">
+        <a href="musica/lstm" class="back-link">← Voltar para lista</a>
+
+        <div class="form-container">
+            <h2>Cadastrar Nova Música</h2>
+
+            <form method="post">
+                <div class="form-group">
+                    <label for="mnome">Nome da Música *</label>
+                    <input type="text" id="mnome" name="mnome">
+                </div>
+
+                <div class="form-group">
+                    <label for="dur">Duração *</label>
+                    <input type="text" id="dur" name="dur">
+                </div>
+
+                <div class="form-group">
+                    <label for="art">Artista *</label>
+                    <input type="text" id="art" name="art">
+                </div>
+
+                <div class="form-group">
+                    <label for="al">Ano de lançamento *</label>
+                    <input type="number" id="al" name="al">
+                </div>
+
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <a href="musica.html" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+    <%- include('../rodape.ejs')%>

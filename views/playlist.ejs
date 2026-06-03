@@ -1,0 +1,49 @@
+<%- include('cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Playlists</h2>
+            <a href="/cadastro_play" class="btn btn-success">+ Nova Playlist</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Música1</th>
+                        <th>Música2</th>
+                        <th>Música3</th>
+                        <th>Mais</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Scorpio Skies</td>
+                        <td>Kyoto</td>
+                        <td>Satanist</td>
+                        <td>American Teenager</td>
+                        <td><a href="/playlist/scorpio" class="link">Ver Detalhes</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Love?</td>
+                        <td>Punish</td>
+                        <td>Georgia</td>
+                        <td>Bite The Hand</td>
+                        <td><a href="/playlist/love?" class="link">Ver Detalhes</a></td>
+                    </tr>
+
+                    <tr>
+                        <td>Love!</td>
+                        <td>Drop Dead</td>
+                        <td>Dust Bowl</td>
+                        <td>True Blue</td>
+                        <td><a href="/playlist/love!" class="link">Ver Detalhes</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('rodape.ejs')%>

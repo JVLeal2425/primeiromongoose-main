@@ -1,0 +1,34 @@
+<%- include('../cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Gêneros</h2>
+            <a href="/genero/add" class="btn btn-success">+ Novo Gênero</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rock</td>
+                        <td>Rock e Indie Rock</td>
+                        <td><a href="/generos/rock" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Indie</td>
+                        <td>Diferenciado</td>
+                        <td><a href="/generos/indie" class="link">Ver Detalhes</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('../rodape.ejs')%>

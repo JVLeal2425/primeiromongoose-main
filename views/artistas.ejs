@@ -1,0 +1,49 @@
+<%- include('cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Artistas</h2>
+            <a href="/cadastro" class="btn btn-success">+ Novo Artista</a>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>País</th>
+                        <th>Ano Início</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phoebe Bridgers</td>
+                        <td>Estados Unidos</td>
+                        <td>2017</td>
+                        <td><a href="/artistas/phoebe" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Lucy Dacus</td>
+                        <td>Estados Unidos</td>
+                        <td>2016</td>
+                        <td><a href="/artistas/lucy" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Julien Baker</td>
+                        <td>Estados Unidos</td>
+                        <td>2017</td>
+                        <td><a href="/artistas/julien" class="link">Ver Detalhes</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ethel Cain</td>
+                        <td>Estados Unidos</td>
+                        <td>2021</td>
+                        <td><a href="/artistas/ethel" class="link">Ver Detalhes</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <%- include('rodape.ejs')%>
