@@ -1,7 +1,6 @@
-<%-include('.. /cabecalho.ejs')%>
-    <header>
-        <h3>Editar Gênero</h3>
-    </header>
+<%- include('../cabecalho.ejs')%>
+    <main class="container"></main>
+    <h3>Editar Gênero</h3>
     <div class="form-container">
         <form id="form-genero" method="post" autocomplete="off">
             <div class="form-group">
@@ -11,14 +10,14 @@
                 </div>
                 <div>
                     <label for="nome">Nome do Gênero</label>
-                    <input id="nome" value="<%=marca.nome%>" name="nome" type="text" placeholder="Ex:Gope" required>
+                    <input id="nome" value="<%=genero.nome%>" name="nome" type="text" placeholder="Rock" required>
                 </div>
                 <div class="field-help">Os campos com * são obrigatórios.</div>
                 <footer>
-                    <a type="button" class="btn ghost" id="btn-cancelar" href="/instrumento/lst">Cancelar</a>
-                    <button type="submit" class="btn primary">Editar Marca</button>
+                    <a type="button" class="btn btn-secondary" id="btn-cancelar" href="/genero/lst">Cancelar</a>
+                    <button type="submit" class="btn btn-success">Editar Gênero</button>
                 </footer>
         </form>
     </div>
 
-    <%-include('.. /rodape.ejs')%>
+    <%- include('../rodape.ejs')%>

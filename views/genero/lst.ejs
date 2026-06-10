@@ -15,12 +15,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <%genero.forEach(genero=>{%>
+                    <%generos.forEach(generos=>{%>
                         <tr>
                             <td>
-                                <%=genero.nome%>
+                                <%=generos.nome%>
                             </td>
-                            <td><a href="/genero/edt/<%=genero.id%>" class="link">Editar</a></td>
+                            <td><a href="/genero/edt/<%=generos.id%>" class="link">Editar</a></td>
                         </tr>
                         <%})%>
                 </tbody>
