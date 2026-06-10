@@ -1,0 +1,24 @@
+<%-include('.. /cabecalho.ejs')%>
+    <header>
+        <h3>Editar Gênero</h3>
+    </header>
+    <div class="form-container">
+        <form id="form-genero" method="post" autocomplete="off">
+            <div class="form-group">
+                <div>
+                    <label for="id">ID do Gênero</label>
+                    <input id="id" value="<%=genero.id%>" name="id" type="text" placeholder="idzao" required>
+                </div>
+                <div>
+                    <label for="nome">Nome do Gênero</label>
+                    <input id="nome" value="<%=marca.nome%>" name="nome" type="text" placeholder="Ex:Gope" required>
+                </div>
+                <div class="field-help">Os campos com * são obrigatórios.</div>
+                <footer>
+                    <a type="button" class="btn ghost" id="btn-cancelar" href="/instrumento/lst">Cancelar</a>
+                    <button type="submit" class="btn primary">Editar Marca</button>
+                </footer>
+        </form>
+    </div>
+
+    <%-include('.. /rodape.ejs')%>

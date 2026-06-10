@@ -8,7 +8,7 @@ const PORT = 3001;
 
 
 
-// Configura o EJS como motor de views
+// Configura o EJS como motor de views sei la
 app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 // pasta onde ficam os arquivos .ejs
