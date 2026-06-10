@@ -1,9 +1,9 @@
-<%- include('cabecalho.ejs')%>
+<%- include('../cabecalho.ejs')%>
 
     <main class="container">
         <div class="page-header">
             <h2>Lista de Artistas</h2>
-            <a href="/adda" class="btn btn-success">+ Novo Artista</a>
+            <a href="/artista/adda" class="btn btn-success">+ Novo Artista</a>
         </div>
 
         <div class="table-container">
@@ -14,36 +14,28 @@
                         <th>País</th>
                         <th>Ano Início</th>
                         <th>Ações</th>
+                        <th>Ações+</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>Phoebe Bridgers</td>
-                        <td>Estados Unidos</td>
-                        <td>2017</td>
-                        <td><a href="/artistas/phoebe" class="link">Ver Detalhes</a></td>
-                    </tr>
-                    <tr>
-                        <td>Lucy Dacus</td>
-                        <td>Estados Unidos</td>
-                        <td>2016</td>
-                        <td><a href="/artistas/lucy" class="link">Ver Detalhes</a></td>
-                    </tr>
-                    <tr>
-                        <td>Julien Baker</td>
-                        <td>Estados Unidos</td>
-                        <td>2017</td>
-                        <td><a href="/artistas/julien" class="link">Ver Detalhes</a></td>
-                    </tr>
-                    <tr>
-                        <td>Ethel Cain</td>
-                        <td>Estados Unidos</td>
-                        <td>2021</td>
-                        <td><a href="/artistas/ethel" class="link">Ver Detalhes</a></td>
-                    </tr>
+                    <%artistas.forEach(artistas=>{%>
+                        <tr>
+                            <td>
+                                <%=artistas.nome%>
+                            </td>
+                            <td>
+                                <%=artistas.pais%>
+                            </td>
+                            <td>
+                                <%=artistas.anoinicio%>
+                            </td>
+                            <td><a href="/musica/dd" class="link">Ver Detalhes</a></td>
+                            <td><a href="/artista/del/<%=artistas.id%>" class="link">Excluir</a></td>
+                        </tr>
+                        <%})%>
                 </tbody>
             </table>
         </div>
     </main>
 
-    <%- include('rodape.ejs')%>
+    <%- include('../rodape.ejs')%>

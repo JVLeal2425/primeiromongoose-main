@@ -1,6 +1,7 @@
 import express from "express";
 import Genero from './models/Genero.js';
 import Musica from './models/Musica.js';
+import Artista from "./models/Artista.js";
 
 const app = express();
 const PORT = 3001;
@@ -46,6 +47,24 @@ app.get("/genero/addok", (req, res) => {
   res.render("genero/addok");
 });
 
+//Edição
+
+app.get('/genero/edt/:id', async (req, res) => {
+
+  const genero = await Genero.findById(req.params.id)
+
+  res.render("genero/edt", { genero })
+
+})
+
+app.post('/genero/edt/:id', async (req, res) => {
+
+  const genero = await Genero.findByIdAndUpdate(req.params.id, req.body)
+
+  res.render("genero/edtok")
+
+})
+
 
 // Rotas da Música
 app.get("/musica", async (req, res) => {
@@ -83,9 +102,30 @@ app.get("/artista", async (req, res) => {
   res.render("artista/lsta", { artistas });
 });
 
+app.get("/artista/adda", (req, res) => {
+  res.render("artista/adda");
+});
+
+app.post("/artista/adda", async (req, res) => {
+  const nome = req.body.anome
+  const pais = req.body.pais
+  const anoinicio = req.body.ai
+
+  await Artista.create({ nome, pais, anoinicio })
+
+  res.render("artista/addoka", { nome, pais, anoinicio });
+});
+
+app.get('/artista/del/:id', async (req, res) => {
+
+  const artista = await Artista.findByIdAndDelete(req.params.id)
+
+  res.redirect("/artista")
+
+})
+
 
 app.listen(PORT, () => {
   console.log(
     `Servidor rodando em http://localhost:${PORT}`)
 });
-
