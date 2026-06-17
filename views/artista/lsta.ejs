@@ -15,22 +15,24 @@
                         <th>Ano Início</th>
                         <th>Ações</th>
                         <th>Ações+</th>
+                        <th>Edições+</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <%artistas.forEach(artistas=>{%>
+                    <%artista.forEach(artista=>{%>
                         <tr>
                             <td>
-                                <%=artistas.nome%>
+                                <%=artista.nome%>
                             </td>
                             <td>
-                                <%=artistas.pais%>
+                                <%=artista.pais%>
                             </td>
                             <td>
-                                <%=artistas.anoinicio%>
+                                <%=artista.anoinicio%>
                             </td>
-                            <td><a href="/musica/dd" class="link">Ver Detalhes</a></td>
-                            <td><a href="/artista/del/<%=artistas.id%>" class="link">Excluir</a></td>
+                            <td><a href="/artista/dd" class="link">Ver Detalhes</a></td>
+                            <td><a href="/artista/del/<%=artista.id%>" class="link">Excluir</a></td>
+                            <td><a href="/artista/edta/<%=artista.id%>" class="link">Editar</a></td>
                         </tr>
                         <%})%>
                 </tbody>

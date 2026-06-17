@@ -1,0 +1,37 @@
+<%- include('../cabecalho.ejs')%>
+    <main class="container">
+        <h3>Editar Música</h3>
+        <div class="form-container">
+            <form id="form-genero" method="post" autocomplete="off">
+                <div class="form-group">
+                    <label for="id">ID da Música</label>
+                    <input id="id" value="<%=musica.id%>" name="id" type="text" placeholder="idzao" required>
+                </div>
+                <div class="form-group">
+                    <label for="nome">Nome da Música</label>
+                    <input id="nome" value="<%=musica.nome%>" name="nome" type="text" placeholder="I Know The End"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="duracao">Duração</label>
+                    <input id="duracao" value="<%=musica.duracao%>" name="duracao" type="text" placeholder="5:45"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="artista">Artista</label>
+                    <input id="artista" value="<%=musica.artista%>" name="artista" type="text"
+                        placeholder="Phoebe Bridgers" required>
+                </div>
+                <div class="form-group">
+                    <label for="anolancamento">Ano de Lançamento</label>
+                    <input id="anolancamento" value="<%=musica.anolancamento%>" name="anolancamento" type="number"
+                        placeholder="2020" required>
+                </div>
+                <div class="field-help">Os campos com * são obrigatórios.</div>
+                <a type="button" class="btn btn-secondary" id="btn-cancelar" href="/musica">Cancelar</a>
+                <button type="submit" class="btn btn-success">Editar Musica</button>
+            </form>
+        </div>
+    </main>
+
+    <%- include('../rodape.ejs')%>

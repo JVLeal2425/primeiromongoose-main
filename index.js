@@ -57,13 +57,34 @@ app.get('/genero/edt/:id', async (req, res) => {
 
 })
 
+app.get('/genero/del/:id', async (req, res) => {
+
+  const genero = await Genero.findByIdAndDelete(req.params.id)
+
+  res.redirect("/genero")
+
+});
+
 app.post('/genero/edt/:id', async (req, res) => {
 
-  const genero = await Genero.findByIdAndUpdate(req.params.id, req.body)
+  const generos = await Genero.findByIdAndUpdate(req.params.id, req.body)
 
   res.render("genero/edtok")
 
-})
+});
+
+app.get("/genero/edtok", (req, res) => {
+  res.render("genero/edtok");
+});
+
+//Pesquisa
+app.post('/genero', async (req, res) => {
+  const { pesquisar } = req.body;
+  const generos = await Genero.find({
+    nome: new RegExp(pesquisar, 'i')
+  });
+  res.render("genero/lst", { generos });
+});
 
 
 // Rotas da Música
@@ -96,10 +117,31 @@ app.post("/musica/addm", async (req, res) => {
   res.render("musica/addokm", { nome, duracao, artista, anolancamento });
 });
 
+app.get('/musica/edtm/:id', async (req, res) => {
+
+  const musica = await Musica.findById(req.params.id)
+
+  res.render("musica/edtm", { musica })
+
+});
+
+app.post('/musica/edtm/:id', async (req, res) => {
+
+  const musica = await Musica.findByIdAndUpdate(req.params.id, req.body)
+
+  res.render("musica/edtokm")
+
+});
+
+app.get("/musica/edtokm", (req, res) => {
+  res.render("musica/edtokm");
+});
+
+
 // Rotas do Artista
 app.get("/artista", async (req, res) => {
-  const artistas = await Artista.find()
-  res.render("artista/lsta", { artistas });
+  const artista = await Artista.find()
+  res.render("artista/lsta", { artista });
 });
 
 app.get("/artista/adda", (req, res) => {
@@ -122,7 +164,27 @@ app.get('/artista/del/:id', async (req, res) => {
 
   res.redirect("/artista")
 
-})
+});
+
+app.get('/artista/edta/:id', async (req, res) => {
+
+  const artista = await Artista.findById(req.params.id)
+
+  res.render("artista/edta", { artista })
+
+});
+
+app.post('/artista/edta/:id', async (req, res) => {
+
+  const artista = await Artista.findByIdAndUpdate(req.params.id, req.body)
+
+  res.render("artista/edtoka")
+
+});
+
+app.get("/artista/edtoka", (req, res) => {
+  res.render("arrtista/edtoka");
+});
 
 
 app.listen(PORT, () => {
