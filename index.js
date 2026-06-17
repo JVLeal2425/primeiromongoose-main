@@ -137,6 +137,15 @@ app.get("/musica/edtokm", (req, res) => {
   res.render("musica/edtokm");
 });
 
+//Pesquisa
+app.post('/musica', async (req, res) => {
+  const { pesquisar } = req.body;
+  const musicas = await Musica.find({
+    nome: new RegExp(pesquisar, 'i')
+  });
+  res.render("musica/lstm", { musicas });
+});
+
 
 // Rotas do Artista
 app.get("/artista", async (req, res) => {
@@ -184,6 +193,15 @@ app.post('/artista/edta/:id', async (req, res) => {
 
 app.get("/artista/edtoka", (req, res) => {
   res.render("arrtista/edtoka");
+});
+
+//Pesquisa
+app.post('/artista', async (req, res) => {
+  const { pesquisar } = req.body;
+  const artistas = await Artista.find({
+    nome: new RegExp(pesquisar, 'i')
+  });
+  res.render("artista/lsta", { artistas });
 });
 
 
